@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: yarn
-          node-version: 16
+          node-version: 20
       - run: yarn install --frozen-lockfile
 
       - run: npm run type
@@ -23,7 +23,7 @@ jobs:
   test-action:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: update action.yml to use image from local Dockerfile
         run: |
@@ -60,7 +60,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: yarn
-          node-version: 16
+          node-version: 20
       - run: yarn install --frozen-lockfile
 
       - name: build svg-only action
@@ -98,7 +98,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: yarn
-          node-version: 16
+          node-version: 20
       - run: yarn install --frozen-lockfile
 
       - run: npm run build:demo
